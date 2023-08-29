@@ -1,0 +1,2 @@
+# smartskool
+SmartSkool
