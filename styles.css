@@ -1,0 +1,103 @@
+body {
+    margin-top: 300px;
+    padding: 0px;
+    font-family: Poppins, sans-serif;
+    background-color: #fffef7;
+    color: #ff009c; 
+    
+  }
+
+  .mask-image {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height:80vh;
+    margin-right: 100vw;
+    background-image: url('1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 50, 100% 100%, 0 50%);
+}
+
+
+  .header {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px; 
+  }
+   
+  h1 {
+
+    display: inline-block;
+    font-size: 3em;
+    line-height:1; 
+    margin: 10;
+    width: 50%;
+    max-width: 100%; 
+    color: #e8f806;  
+
+  } 
+   
+  .logo {
+    
+     
+    border-radius: 45px; 
+    max-width: 100%;
+    margin: 1vw;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100px; padding: 20px;
+    height: auto;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-container:hover {
+    transform: translateX(-10px); 
+  }
+  .logo-container {
+    /* Existing styles */
+    display: inline;
+    transition: transform 0.6s, box-shadow 0.6s; /* Changed duration to 0.6s */
+  }
+
+
+
+  
+  p {
+    font-size: 1em;  
+    display:inline-block; 
+    width:30vw ;
+    padding: 10px; /*Add some padding for spacing */
+    border-radius: 15px; /* Add rounded corners */
+    background-color: #3f0a57; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    } 
+ 
+    div {
+
+  
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  .random-color-text {
+    /* Existing styles */
+    transition: background-color 0.6s, color 0.6s; /* Added transition for background-color and color */
+  }
+  
