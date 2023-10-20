@@ -1,5 +1,5 @@
 body {
-    margin-top: 300px;
+    margin-top: 500px;
     padding: 0px;
     font-family: Poppins, sans-serif;
     background-color: #fffef7;
@@ -35,7 +35,7 @@ body {
     margin: 10;
     width: 50%;
     max-width: 100%; 
-    color: #e8f806;  
+    color: #3f0a57;  
 
   } 
    
@@ -66,23 +66,77 @@ body {
   p {
     font-size: 1em;  
     display:inline-block; 
-    width:30vw ;
+    width:20vw ;
     padding: 10px; /*Add some padding for spacing */
     border-radius: 15px; /* Add rounded corners */
     background-color: #3f0a57; 
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow */
     } 
  
-    div {
-
-  
-
-
+    .card {
+      display: inline-block;
+      width: 20vw;
+      padding: 10px;
+      border-radius: 15px;
+      background-color: #3f0a57;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      color: #fff; /* Text color */
+      margin: 10px; /* Add margin for spacing between cards */
     }
+    
 
-
-
-
+    #menu-icon {
+      font-size: 38px;
+      cursor: pointer;
+      position: fixed;
+      top: 30px;
+      left: 11%;
+      z-index: 2;
+      color: #fcf6f6;
+    }
+    
+    /* Style the menu when the checkbox is checked */
+    #menu-toggle:checked ~ #menu {
+      left: 0;
+    }
+    
+    /* Style the menu container */
+    #menu {
+      background-color: #19270c;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: auto;
+      overflow: auto;
+      transition: 0.3s;
+      z-index: 1;
+      opacity: .5;
+    }
+    
+    /* Style the menu items */
+    #menu ul {
+      padding: 20px;
+    }
+    
+    #menu ul li {
+      margin: 10px 0;
+    }
+    
+    #menu a {
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    /* Style for the login link */
+    #menu ul li:last-child {
+      margin-top: 30px;
+    }
+    
+    /* Add a hover effect for menu items */
+    #menu a:hover {
+      text-decoration: underline;
+    }
 
 
 
