@@ -3,6 +3,8 @@ body {
   background-color: #fffef7;
   color: #ff009c;
   text-align: center;
+  overflow-x: hidden;
+  
 }
 
 .mask-image {
