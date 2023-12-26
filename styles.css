@@ -26,7 +26,6 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   width: 200px;  
   height: auto; 
-
 }
  
 h1 {
@@ -44,7 +43,8 @@ h1 {
   z-index: 999;
   border-radius: 30px;  
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 200px;  
+  width: 20vw;  
+  max-width: 100%;
   height: auto;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
 
@@ -108,6 +108,7 @@ p {
 .menu li {
   margin: 10px;
   background-color: #ff4b9f;
+  border-radius: 5px;
 }
 
 .menu li a {
@@ -152,3 +153,25 @@ p {
     button:hover {
       background-color: #ff4b9f;
     }
+
+/* For all divs across all classes */
+* div {
+  max-width: 100%;
+}
+
+/* Media query for phones */
+@media screen and (max-width: 767px) {
+  /* Target all divs within different classes */
+  * div {
+    max-width: 100%;
+  }
+  h3{ font-size: .6em; }
+  hr { display: none; margin: 0%;}
+  h1 { font-size: small; margin: 0%; }
+  .logo { 
+    margin-top: 10vw; 
+    width: 20vw;  
+  max-width: 100%;
+  height: auto;
+   }
+}
