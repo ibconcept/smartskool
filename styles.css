@@ -4,8 +4,8 @@ body {
   color: #ff4b9f;
   text-align: center;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+  margin: 20;
+  padding: 10;
 }
 
 .mask-image {
@@ -17,8 +17,11 @@ body {
   background-image: url('1.jpg');  
   background-size: cover; 
 } 
+li{
 
-
+  text-align: left;
+}
+p .random-color-text {text-align: center;}
 
 h1 {
 
@@ -61,16 +64,6 @@ h1 {
   transition: transform 0.6s, box-shadow 0.6s; 
 }
 
-p {
-  text-align: center;
-  font-size: 1em;
-  display:flex; 
-  padding: 10px;
-  width: 30vw;
-  border-radius: 15px;
-  background-color: #3f0a57;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-} 
 
 .card {
   display: flex;
@@ -124,6 +117,7 @@ p {
   color: #fff;
 }
 
+
  .login-container {
       background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
@@ -160,30 +154,41 @@ p {
 * div {
   max-width: 100%;
 }
-
 /* Media query for phones */
 @media screen and (max-width: 767px) {
   /* Target all divs within different classes */
   * div {
     max-width: 100%;
+    text-align: center;
   }
-  h3{ font-size: .6em; }
-  hr { display: none; margin: 0%;}
-  br { display: none; margin: 0%;}
+  h3 { font-size: .6em; }
+  hr { display: none; margin: 0%; }
+  br { display: none; margin: 0%; }
   h1 { font-size: small; margin: 0%; }
   .logo { 
     margin-top: 10vw; 
     width: 20vw;  
-  max-width: 100%;
-  height: auto;
-   }
-   .menu , .menu-li , .random-color-text {  
-  width: 80vw;    
-  height: auto;
-  display: flex;
-   }
-   .card { width: 80vw;
-   }
-
-
+    max-width: 100%;
+    height: auto;
+  }
+  .menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .menu-li {
+    width: 20vw;
+    margin: 1%;
+    flex: 0 0 calc(30% - 4px); /* Adjust width for two items per row, considering margins */
+  }
+  .random-color-text {  
+    width: 80vw;    
+    height: auto;
+    display: flex;
+  }
+  .card { 
+    width: 80vw;
+  }
 }
+
