@@ -17,10 +17,12 @@ body {
   background-image: url('1.jpg');  
   background-size: cover; 
 } 
-li{
+
+li {
 
   text-align: left;
 }
+
 p .random-color-text {text-align: center;}
 
 h1 {
@@ -76,7 +78,7 @@ h1 {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: safe;
   gap: 10px;
   margin-top: 20px;  
 }
