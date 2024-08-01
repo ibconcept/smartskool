@@ -4,8 +4,8 @@ body {
   color: #ff4b9f;
   text-align: center;
   overflow-x: hidden;
-  margin: 20;
-  padding: 10;
+  margin: 20px;
+  padding: 10px;
 }
 
 .mask-image {
@@ -13,59 +13,36 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  z-index: -1; 
-  background-image: url('1.jpg');  
+  z-index: -1;  
   background-size: cover; 
-} 
-
-li {
-
-  text-align: left;
 }
 
-p .random-color-text {text-align: center;}
-
 h1 {
-
   display: inline-block;
   font-size: 3em;
   max-width: 100%;
   color: #3f0a57;
-
 }
-
 
 .logo {
   margin-top: 10vw; 
-  z-index: 999;
+  z-index: 1;
   border-radius: 30px;  
   transition: transform 0.3s, box-shadow 0.3s;
   width: 10vw;  
   max-width: 100%;
   height: auto;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
-
 }
 
-.logo2 {
-  margin-top: 1%; 
-  z-index: 999;
-  border-radius: 30px;  
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 20vw;  
-  height: auto; 
+.logo-container {
+  display: inline;
+  transition: transform 0.6s, box-shadow 0.6s;
 }
- 
 
 .logo-container:hover {
   transform: translateX(-10px);
 }
-
-.logo-container { 
-  display: inline;
-  transition: transform 0.6s, box-shadow 0.6s; 
-}
-
 
 .card {
   display: flex;
@@ -73,21 +50,21 @@ h1 {
   padding: 10px;
   border-radius: 15px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  color: #fff;    
+  background-color: #ff4b9f;
+  color: #fff;
+  transition: opacity 0.3s ease-in-out;
 }
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: safe;
+  justify-content: center;
   gap: 10px;
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 
-.card { 
-  background-color: #ff4b9f;  
-}
-
-.random-color-text { 
+.random-color-text {
+  text-align: center;
   transition: background-color 0.6s, color 0.6s; 
 }
 
@@ -101,7 +78,6 @@ h1 {
 }
 
 .menu li {
-
   margin: 2px;
   background-color: #ff4b9f;
   border-radius: 5px;
@@ -119,78 +95,82 @@ h1 {
   color: #fff;
 }
 
+.login-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+}
 
- .login-container {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 5%;
-    }
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
 
-    input[type="text"],
-    input[type="password"] {
-      width: 50%;
-      padding: 8px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-      margin-bottom: 15px;
-    }
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: 30%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      width: 30%;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #ff4b9f;
-    }
+button:hover {
+  background-color: #ff4b9f;
+}
 
 /* For all divs across all classes */
 * div {
   max-width: 100%;
 }
+
 /* Media query for phones */
 @media screen and (max-width: 767px) {
-  /* Target all divs within different classes */
   * div {
     max-width: 100%;
     text-align: center;
   }
+
   h3 { font-size: .6em; }
-  hr { display: none; margin: 0%; }
-  br { display: none; margin: 0%; }
-  h1 { font-size: small; margin: 0%; }
+
+  hr, br { display: none; margin: 0; }
+
+  h1 { font-size: small; margin: 0; }
+
   .logo { 
     margin-top: 10vw; 
     width: 20vw;  
     max-width: 100%;
     height: auto;
   }
+
   .menu {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
   }
   
-  .menu-li {
+  .menu li {
     width: 20vw;
     margin: 1%;
-    flex: 0 0 calc(30% - 4px); /* Adjust width for two items per row, considering margins */
+    flex: 0 0 calc(30% - 4px);
   }
+
   .random-color-text {  
     width: 80vw;    
     height: auto;
     display: flex;
   }
+
   .card { 
     width: 80vw;
   }
 }
-
