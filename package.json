@@ -46,7 +46,7 @@
       ],
       "plugins": ["html", "react", "vue"],
       "rules": {
-        // Your custom rules
+        
       }
     },
     "stylelint": {
