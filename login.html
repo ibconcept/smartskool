@@ -4,7 +4,6 @@
   
   
   
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="SmartSkool" content="Innovative school products and solutions">
@@ -72,18 +71,34 @@
 
 </head>
 <body>
-  <div class="mask-image"></div>
-  <div class="logo-container">
-   <a href="index.html"> <img src="images/logo.png" alt="SmartSkool Logo" class="logo2">  </a>
+   <a href="index.html"> <img src="images/logo.png" alt="SmartSkool Logo" class="logo">  </a>
   </div>
   <div class="login-container">
-    <h2>Login to SmartSkool</h2>
+    <h2>Student Login</h2>
     <form action="login.php" method="post">
       <input type="text" id="username" name="username" placeholder="Username" required><br>
       <input type="password" id="password" name="password" placeholder="Password" required><br>
       <button type="submit">Login</button>
     </form>
   </div>
+  <h2>Teacher Login</h2>
+  <form action="login.php" method="post">
+    <input type="text" id="username" name="username" placeholder="Username" required><br>
+    <input type="password" id="password" name="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+</div>
+<h2> School Admin Login </h2>
+<form action="login.php" method="post">
+  <input type="text" id="username" name="username" placeholder="Username" required><br>
+  <input type="password" id="password" name="password" placeholder="Password" required><br>
+  <button type="submit">Login</button>
+</form>
+</div>
 
+
+<a href="index.html"><p>Learn more</p></a>
+
+<a href="index.html"><p>Back Home</p></a>
 </body>
 </html>

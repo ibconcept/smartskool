@@ -1,11 +1,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fffef7;
-  color: #ff4b9f;
+  color: #007bff;
   text-align: center;
   overflow-x: hidden;
-  margin: 20px;
-  padding: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .mask-image {
@@ -18,9 +18,17 @@ body {
   background-size: cover; 
 }
 
-h1 { 
-  font-size: 3em; 
+h1 {
+  font-weight: 900;
+  font-size: xx-large; 
+  margin: 20px;
+  padding: 5px;
   color: #3f0a57;
+}
+
+h2 , h3 {
+margin: 10px;
+  font-size: 1.2em;
 }
 
 .logo {
@@ -32,15 +40,6 @@ h1 {
   max-width: 100%;
   height: auto;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.logo-container {
-  display: inline;
-  transition: transform 0.6s, box-shadow 0.6s;
-}
-
-.logo-container:hover {
-  transform: translateX(-10px);
 }
 
 .card {
@@ -62,11 +61,6 @@ h1 {
   margin-top: 20px;
 }
 
-.random-color-text {
-  text-align: center;
-  transition: background-color 0.6s, color 0.6s; 
-}
-
 .menu {
   padding: 0;
   margin: 0;
@@ -74,24 +68,24 @@ h1 {
   display: flex;
   justify-content: center;
   font-weight: bolder;
+  text-align: center;
+
 }
 
 .menu li {
-  margin: 2px;
+  margin: 2px 0;
   background-color: #ff4b9f;
-  border-radius: 5px;
+  border-radius: 15px;
   text-decoration: none;
 }
 
 .menu li a {
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  color:#3f0a57;
 }
 
 .menu li a:hover {
-  background-color: #3f0a57;
-  color: #fff;
+  background-color: yellow;
+  color: #3f0a57;
 }
 
 .login-container {
@@ -109,13 +103,20 @@ input[type="password"] {
   border-radius: 3px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
+  }
+
+a {
+
+  text-decoration: none;
 }
 
+
 button {
-  padding: 10px 20px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
   background-color: #007bff;
-  color: #fff;
-  border: none;
+  color: yellow;
   width: 30%;
   border-radius: 3px;
   cursor: pointer;
@@ -137,14 +138,27 @@ button:hover {
     max-width: 100%;
     text-align: center;
   }
+  a {
+    text-decoration: none;
+    font-weight: 800;
+  }
+  hr { 
+  background-color: yellow;
+  height: 2px;
+  text-align: center;
+  width: 80vw;
+}
 
-  h3 { font-size: .6em; }
 
+   h2 {
+    font-size: 1em;
+    font-weight: 200;
+    margin: 10px;
 
-  h1 { font-size: small; margin: 0; }
+  }
 
   .logo { 
-    margin-top: 10vw; 
+    margin-top: 5vw; 
     width: 20vw;  
     max-width: 100%;
     height: auto;
@@ -158,14 +172,8 @@ button:hover {
   
   .menu li {
     width: 20vw;
+    text-align: center;
     margin: 1%;
-    flex: 0 0 calc(30% - 4px);
-  }
-
-  .random-color-text {  
-    width: 80vw;    
-    height: auto;
-    display: flex;
   }
 
   .card { 
