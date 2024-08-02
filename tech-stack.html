@@ -1,109 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Stack - SmartSkool</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>SmartSkool Tech Stack</h1>
-    </header>
-    <main>
-      <section>
-        <h2>Frontend</h2>
-        <ul>
-          <li>
-            <strong>React.js:</strong> JavaScript library for building user
-            interfaces
-          </li>
-          <li>
-            <strong>Next.js:</strong> Framework for server-side rendering and
-            static site generation
-          </li>
-          <li>
-            <strong>Material-UI / Ant Design:</strong> Pre-styled component
-            libraries for responsive design
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Backend</h2>
-        <ul>
-          <li>
-            <strong>Node.js with Express.js:</strong> Fast and flexible backend
-            framework
-          </li>
-          <li>
-            <strong>GraphQL:</strong> Efficient data fetching for complex
-            queries
-          </li>
-          <li>
-            <strong>Django / Flask:</strong> Alternative Python frameworks for
-            specific features or microservices
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Database</h2>
-        <ul>
-          <li>
-            <strong>PostgreSQL:</strong> Powerful relational database system
-          </li>
-          <li>
-            <strong>MongoDB:</strong> NoSQL database for handling unstructured
-            data
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Authentication & Authorization</h2>
-        <ul>
-          <li>
-            <strong>Auth0 / Firebase Authentication:</strong> Comprehensive
-            authentication solutions
-          </li>
-          <li><strong>JWT:</strong> Secure token-based authentication</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Real-time Features</h2>
-        <ul>
-          <li><strong>Socket.io:</strong> Real-time communication</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Hosting & Deployment</h2>
-        <ul>
-          <li><strong>Vercel / Netlify:</strong> Deployment for frontend</li>
-          <li><strong>Heroku / DigitalOcean:</strong> Backend deployment</li>
-          <li><strong>AWS:</strong> Robust cloud services</li>
-        </ul>
-      </section>
-      <section>
-        <h2>CI/CD</h2>
-        <ul>
-          <li>
-            <strong>GitHub Actions:</strong> Automating build, test, and
-            deployment pipelines
-          </li>
-          <li>
-            <strong>Jenkins:</strong> Open-source automation server for CI/CD
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Additional Tools</h2>
-        <ul>
-          <li><strong>Docker:</strong> Containerizing the application</li>
-          <li><strong>Kubernetes:</strong> Orchestrating Docker containers</li>
-          <li><strong>ElasticSearch:</strong> Advanced search capabilities</li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 SmartSkool. All rights reserved.</p>
-    </footer>
-  </body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="nav-wrapper">
+            <img src="images/logo.png" alt="smartskool logo" class="logo">
+            <!-- <a href="#" class="brand-logo center">SmartSkool</a> -->
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+
+            <h1>SmartSkool Tech Stack</h1>
+        </header>
+
+
+        <p>
+            among many other tools use cases here at the design agency   
+            making 
+            apps   for smartskool we made this page so collaborators
+            can know which stack we use and in our efforts
+            to become open source 
+            -os linux ubuntu, shell bash and zsh,, server nginx- or
+             family, databse sql sqlite 
+            PostgreSQL, deploy gcp, AWS, stacks react lib, vue, 
+            solid, tools vite, applications
+            flask, python for configs, json, 
+             php-laverel,,on server,,
+             guicorn,,
+             working on go, 
+             
+             SvelteKit vs. Solid.js
+SvelteKit: Pros: SSR, database support, scalability, full stack, strong 
+community; Cons: Learning curve, setup complexity, larger bundle, more 
+config, potential overhead.
+
+Solid.js: Pros: High performance, fine-grained reactivity,
+ small bundle, minimal runtime, fast updates; Cons: No native SSR,
+  fewer integrations,
+ smaller community, learning curve, less documentation.
+        </p>
+        <main>
+            <section class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Frontend</h2>
+                        <p><strong>React.js:</strong> For building dynamic and interactive UIs.</p>
+                        <p><strong>Material-UI:</strong> Styling library for consistent design.</p>
+                        <p><strong>Vite:</strong> Fast build tool for optimized development.</p>
+                        <p><strong>Redux:</strong> For managing global application state.</p>
+                        <p><strong>React Router:</strong> For handling routing within the app.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Backend</h2>
+                        <p><strong>Node.js:</strong> Scalable runtime environment for server-side operations.</p>
+                        <p><strong>Express.js:</strong> Framework for building robust APIs.</p>
+                        <p><strong>GraphQL:</strong> Efficient data querying and manipulation.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Database</h2>
+                        <p><strong>PostgreSQL:</strong> Powerful relational database system.</p>
+                        <p><strong>Prisma:</strong> ORM tool for managing database interactions.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Authentication & Authorization</h2>
+                        <p><strong>Auth0:</strong> Comprehensive authentication service.</p>
+                        <p><strong>JWT:</strong> Token-based authentication management.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Real-time Features</h2>
+                        <p><strong>Socket.io:</strong> Real-time communication for live updates.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Hosting & Deployment</h2>
+                        <p><strong>Vercel:</strong> For deploying frontend applications.</p>
+                        <p><strong>Heroku:</strong> Backend deployment and scaling.</p>
+                        <p><strong>AWS RDS:</strong> Managed PostgreSQL hosting.</p>
+                        <p><strong>AWS S3:</strong> Object storage for static assets.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>CI/CD</h2>
+                        <p><strong>GitHub Actions:</strong> Automates build, test, and deployment pipelines.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h2>Monitoring & Analytics</h2>
+                        <p><strong>Sentry:</strong> Real-time error tracking.</p>
+                        <p><strong>Google Analytics:</strong> User interaction and behavior tracking.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <p>&copy; 2024 SmartSkool. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script/material-io.js"></script>
+</body>
+
 </html>
