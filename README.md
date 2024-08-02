@@ -7,22 +7,23 @@ Mission: SmartSkool aims to accelerate the educational process and bring schools
 Vision: We aspire to create enthusiastic and engaged learners who become wholesome individuals, ready to tackle the world's challenges.
 
 Features
+
 1. School Mini-Site
-A personalized mini-site for each school to display contact information, school statistics, mission, vision, and school events.
-Supports the Kenya CBC curriculum and aligns with educational standards across Africa.
+   A personalized mini-site for each school to display contact information, school statistics, mission, vision, and school events.
+   Supports the Kenya CBC curriculum and aligns with educational standards across Africa.
 2. Learning Tools
-SmartSkool offers a wide range of digital learning tools including math, science, STEM, programming, and computer science resources.
-These tools are designed for K-12 students to enhance their understanding and skills.
+   SmartSkool offers a wide range of digital learning tools including math, science, STEM, programming, and computer science resources.
+   These tools are designed for K-12 students to enhance their understanding and skills.
 3. Motivation Signs
-Inspirational content and motivational signs to keep students engaged and enthusiastic about learning.
+   Inspirational content and motivational signs to keep students engaged and enthusiastic about learning.
 4. School Mottos
-Generate custom school mottos to represent the unique identity and spirit of each institution.
+   Generate custom school mottos to represent the unique identity and spirit of each institution.
 5. Career Compass & Guidance
-Tools and resources to guide students in their career choices, offering career compasses and guidance.
+   Tools and resources to guide students in their career choices, offering career compasses and guidance.
 6. School Boards
-Access service charters and honors boards, recognizing exceptional achievements within the school.
-Team
-Founder: Maina William
+   Access service charters and honors boards, recognizing exceptional achievements within the school.
+   Team
+   Founder: Maina William
 
 Location: Nairobi, Kenya
 

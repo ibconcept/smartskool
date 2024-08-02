@@ -51,12 +51,3 @@ Have you participated in an incubation or pre-acceleration program previously?: 
 What are you looking to achieve through the Incubation Program?: [This section is missing content. Please provide your goals for participating in the program.]
 How did you learn about the E4Impact Incubator Program?: [Select from options or specify]
 Feel free to fill in the missing sections with appropriate details or let me know if you need help formulating the responses.
-
-
-
-
-
-
-
-
-
