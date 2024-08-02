@@ -1,5 +1,3 @@
-<!-- #product.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,89 +10,143 @@
     <meta property="og:description" content="SmartSkool innovative school products and solutions">
     <meta property="og:image" content="https://www.ibconcept.xyz">
     <meta name="william-maina" content="ibconcept-design-agency">
-    <title>SmartSkool</title>
+    <title>SmartSkool - Products</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .image-container {
+            width: 80vw;
+            /* Default to phone view */
+            max-width: 100%;
+            /* Ensure it doesn't exceed viewport */
+            margin: 0 auto;
+            display: block;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            /* Scale to fit container */
+        }
+
+        @media (min-width: 768px) {
+            .image-container {
+                width: 30vw;
+                /* PC view */
+            }
+        }
+
+        .card {
+            text-align: center;
+            margin: 1em auto;
+            padding: 1em;
+            display: flex;
+            border-radius: 8px;
+            /* Limit width */
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .pagination button {
+            margin: 0 0.5em;
+        }
+    </style>
 </head>
 
 <body>
-    <a href="index.html"><img src="images/logo.png" class="logo2" alt="SmartSkool Image"> </a>
-    <br>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" class="logo" alt="SmartSkool Image">
+        </a>
+    </header>
+    <hr>
+    <a href="products.html" class="mdc-button mdc-button--raised">
+        <i class="material-icons mdc-button__icon">store</i>
+        <span class="mdc-button__label">Products</span>
+    </a>
 
-    <div class="container">
-        <h1>SmartSkool - School Digital Tool</h1> <br>
-        <p>SmartSkool is a comprehensive digital platform designed to enhance the educational experience for schools,
-            students, and teachers. Our goal is to transform traditional education into a dynamic, just-in-time learning
-            environment that engages students, provides valuable resources, and promotes holistic development.</p>
+    <div id="product-container"></div>
 
-
-        <p><strong>Mission:</strong> SmartSkool aims to accelerate the educational process and bring schools to par with
-            global standards by turning education into dynamic, on-demand learning.</p>
-        <p><strong>Vision:</strong> We aspire to create enthusiastic and engaged learners who become wholesome
-            individuals, ready to tackle the world's challenges.</p>
-
-        <hr>
-
-        <h3>Features</h3>
-        <ul>
-            <li>Schools Micro-Site</li>
-            <li>Digital Learning Tools
-            <li>school communication ms///bulk sms</li>
-            <br> Homework mgt sym //</li>
-            <li>Motivation Signs</li>
-            <li>School Mottos</li>
-            <li>Career Compass & Guidance</li>
-            <li>School Boards</li>
-        </ul>
-
-
-
-        <hr>
-
-        <div class="card">
-            <h3>How to Contribute</h3>
-            <p>We welcome contributions from experts in the field of education, software developers, and educators who
-                share our vision of transforming education.</p>
-            <ul>
-                <li>Fork this repository</li>
-                <li>Clone it to your local environment</li>
-                <li>Create a new branch for your feature or fix</li>
-                <li>Make changes and test thoroughly</li>
-                <li>Submit a Pull Request</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="card">
-            <h3>Getting Started</h3>
-            <p>To set up SmartSkool, please follow the installation instructions in the documentation located in the
-                /docs folder.</p>
-        </div>
-
-        <hr>
-
-        <div class="card">
-            <h3>License</h3>
-
-            <p>This project is licensed under the MIT License.</p>
-        </div>
-
-        <hr>
-
-
+    <div class="pagination">
+        <button id="prev-button" onclick="changePage(-1)">Previous</button>
+        <button id="next-button" onclick="changePage(1)">Next</button>
     </div>
 
+    <script>
+        const products = [
+            { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
+            { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
+            { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
+            { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
+            { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
+            { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
+            { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
+            { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
+            { name: "School Boards", image: "images/school-boards.jpg", description: "Durable and versatile school boards." }
+            // Add more products as needed
+        ];
 
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
+        let currentPage = 1;
+        const productsPerPage = 4;
+
+        function renderProducts() {
+            const container = document.getElementById('product-container');
+            container.innerHTML = '';
+
+            const start = (currentPage - 1) * productsPerPage;
+            const end = start + productsPerPage;
+            const paginatedProducts = products.slice(start, end);
+
+            paginatedProducts.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'card';
+
+                productDiv.innerHTML = `
+                    <figure class="image-container">
+                        <img src="${product.image}" alt="${product.name}">
+                        <figcaption>${product.description}</figcaption>
+                    </figure>
+                    <h3>${product.name}</h3>
+                `;
+
+                container.appendChild(productDiv);
+            });
+
+            document.getElementById('prev-button').style.display = currentPage === 1 ? 'none' : 'inline';
+            document.getElementById('next-button').style.display = end >= products.length ? 'none' : 'inline';
+        }
+
+        function changePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage > 0 && newPage <= Math.ceil(products.length / productsPerPage)) {
+                currentPage = newPage;
+                renderProducts();
+            }
+        }
+
+        renderProducts();
+    </script>
+
+    <h3>Contact:</h3>
+
+<a href="tel:+254729301689">
+  <i class="fas fa-phone"></i> Call
+</a>
 
 
     <p><strong>Location:</strong> Nairobi, Kenya</p>
 
+    <script src="script/material-io.js"></script>
 
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
