@@ -5,7 +5,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   margin: 20px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .mask-image {
@@ -18,10 +18,8 @@ body {
   background-size: cover; 
 }
 
-h1 {
-  display: inline-block;
-  font-size: 3em;
-  max-width: 100%;
+h1 { 
+  font-size: 3em; 
   color: #3f0a57;
 }
 
@@ -142,7 +140,6 @@ button:hover {
 
   h3 { font-size: .6em; }
 
-  hr, br { display: none; margin: 0; }
 
   h1 { font-size: small; margin: 0; }
 
