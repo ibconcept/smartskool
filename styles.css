@@ -1,6 +1,6 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fffef7;
+  font-family: "Poppins", sans-serif;
+  background-color: aliceblue;
   color: #007bff;
   text-align: center;
   overflow-x: hidden;
@@ -9,34 +9,36 @@ body {
 }
 
 .mask-image {
-  width: 100vw; 
+  width: 100vw;
   top: 0;
   left: 0;
   position: absolute;
-  z-index: -1;  
-  opacity: 0.3;
-  background-size: cover; 
+  z-index: -1;
+  opacity: 0.8;
+  background-size: cover;
 }
 
 h1 {
   font-weight: 900;
-  font-size: xx-large; 
+  font-size: xx-large;
   margin: 20px;
   padding: 5px;
   color: #3f0a57;
 }
 
-h2 , h3 {
-margin: 10px;
+h3 {
+  margin: 10px;
   font-size: 1.2em;
 }
 
 .logo {
-  margin-top: 10vw; 
+  margin-top: 10vw;
   z-index: 1;
-  border-radius: 30px;  
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 10vw;  
+  border-radius: 30px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  width: 10vw;
   max-width: 100%;
   height: auto;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
@@ -69,7 +71,6 @@ margin: 10px;
   justify-content: center;
   font-weight: bolder;
   text-align: center;
-
 }
 
 .menu li {
@@ -80,7 +81,7 @@ margin: 10px;
 }
 
 .menu li a {
-  color:#3f0a57;
+  color: #3f0a57;
 }
 
 .menu li a:hover {
@@ -103,22 +104,20 @@ input[type="password"] {
   border-radius: 3px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
-  }
+}
 
 a {
-
   text-decoration: none;
 }
 
-
 button {
-  border-radius: 20px;
+  border: none;
   padding: 10px;
   margin: 10px;
   background-color: #007bff;
   color: yellow;
-  width: 30%;
-  border-radius: 3px;
+  width: 20vw;
+  border-radius: 13px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -138,28 +137,29 @@ button:hover {
     max-width: 100%;
     text-align: center;
   }
+
   a {
     text-decoration: none;
     font-weight: 800;
   }
-  hr { 
-  background-color: yellow;
-  height: 2px;
-  text-align: center;
-  width: 80vw;
-}
 
-
-   h2 {
-    font-size: 1em;
-    font-weight: 200;
-    margin: 10px;
-
+  hr {
+    background-color: yellow;
+    height: 2px;
+    text-align: center;
+    width: 80vw;
   }
 
-  .logo { 
-    margin-top: 5vw; 
-    width: 20vw;  
+  h2 {
+    font-size: 1em;
+    color: #ff4b9f;
+    font-weight: 900;
+    margin: 5vw;
+  }
+
+  .logo {
+    margin-top: 5vw;
+    width: 20vw;
     max-width: 100%;
     height: auto;
   }
@@ -169,14 +169,14 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .menu li {
     width: 20vw;
     text-align: center;
     margin: 1%;
   }
 
-  .card { 
+  .card {
     width: 80vw;
   }
 }

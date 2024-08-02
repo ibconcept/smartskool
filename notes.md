@@ -1,6 +1,10 @@
 <!-- #ff4b9f - colors -->
 
 SMARTSKOOL K12  ENTREPRICE APP
+
+<!-- , Since traditional schools might be rendered defunct by the rise of AI, we aim to create an school will a private online school for k-12, that will need to stand the test of time/ with just in time learning {JITL} flexible, adaptable and high value palatable education -->
+
+
 (african schools
 public
 private
