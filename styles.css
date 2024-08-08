@@ -27,9 +27,12 @@ h1 {
   padding: 5px;
   color: #3f0a57;
 }
-
+h2{
+  color: #ff4b9f;
+}
 h3 {
   margin: 10px;
+  color: #3f0a57;
   font-size: 1.2em;
 }
 
@@ -46,28 +49,43 @@ h3 {
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
 }
 
+
+/* card css */
+
+
 .card {
-  display: flex;
   width: 40vw;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #ff4b9f;
   color: #fff;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.card-container {
+ 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  margin: 0 auto; /* Center the card horizontally */
   margin-top: 20px;
 }
 
+.card-container {
+  display: block;
+  margin-top: 20px;
+  text-align: center; /* Center the card-container's content horizontally */
+}
+
+
+
+
+p {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+
+
+
 .menu {
-  padding: 0;
-  margin: 0;
+  
+  margin: 2%;
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -81,6 +99,8 @@ h3 {
   border-radius: 15px;
   text-decoration: none;
 }
+
+
 
 .menu li a {
   color: #3f0a57;
@@ -101,9 +121,9 @@ h3 {
 
 input[type="text"],
 input[type="password"] {
-  width: 50%;
+  width: 30%;
   padding: 8px;
-  border-radius: 3px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
 }
@@ -115,10 +135,10 @@ a {
 button {
   border: none;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   background-color: #007bff;
   color: yellow;
-  width: 20vw;
+  width: 10vw;
   border-radius: 13px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -166,19 +186,9 @@ button:hover {
     height: auto;
   }
 
-  .menu {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .menu li {
-    width: 20vw;
-    text-align: center;
-    margin: 1%;
-  }
 
   .card {
     width: 80vw;
+
   }
 }
