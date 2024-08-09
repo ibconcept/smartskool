@@ -132,8 +132,9 @@ button:hover {
 }
 
 /* For all divs across all classes */
-* div {
+* div , a {
   max-width: 100%;
+  margin: 3px;
 }
 
 /* Media query for phones */
