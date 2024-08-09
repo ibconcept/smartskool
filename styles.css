@@ -31,7 +31,7 @@ h2{
   color: #ff4b9f;
 }
 h3 {
-  margin: 10px;
+  margin: 5px;
   color: #3f0a57;
   font-size: 1.2em;
 }
@@ -63,7 +63,7 @@ h3 {
  
   display: flex;
   margin: 0 auto; /* Center the card horizontally */
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .card-container {
@@ -73,6 +73,12 @@ h3 {
 }
 
 
+hr {
+  background-color: yellow;
+  height: 1px;
+  text-align: center;
+  width: 80%;
+}
 
 
 p {
@@ -149,18 +155,11 @@ button:hover {
     font-weight: 800;
   }
 
-  hr {
-    background-color: yellow;
-    height: 2px;
-    text-align: center;
-    width: 80vw;
-  }
 
   h2 {
     font-size: 1em;
     color: #ff4b9f;
     font-weight: 900;
-    margin: 5vw;
   }
 
   .logo {
