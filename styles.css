@@ -85,31 +85,11 @@ p {
 
 .menu {
   
-  margin: 2%;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
+  margin: 1%;
   font-weight: bolder;
   text-align: center;
 }
 
-.menu li {
-  margin: 2px 0;
-  background-color: #ff4b9f;
-  border-radius: 15px;
-  text-decoration: none;
-}
-
-
-
-.menu li a {
-  color: #3f0a57;
-}
-
-.menu li a:hover {
-  background-color: yellow;
-  color: #3f0a57;
-}
 
 .login-container {
   background-color: rgba(255, 255, 255, 0.9);
@@ -136,9 +116,12 @@ button {
   border: none;
   padding: 10px;
   margin: 5px;
+  display: inline-block;
+box-sizing: border-box;
+text-align: center;
+
   background-color: #007bff;
   color: yellow;
-  width: 20vw;
   border-radius: 13px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -189,6 +172,7 @@ button:hover {
 
   .card {
     width: 80vw;
+    flex-direction: column;
 
   }
 }
