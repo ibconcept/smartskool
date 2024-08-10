@@ -114,6 +114,13 @@ input[type="password"] {
   margin-bottom: 15px;
 }
 
+li {
+text-align: center;
+list-style-type: none;
+}
+
+
+
 a {
   text-decoration: none;
 }
