@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Motivational quotes to inspire and encourage students." />
+    <title>Motivational Quotes</title>
+    <link href="styles.css" type="style/sheet">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+      .quote {
+        display: block;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        max-width: 600px;
+        position: relative;
+      }
+      .quote::before {
+        content: '“';
+        font-size: 3em;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .quote::after {
+        content: '”';
+        font-size: 3em;
+        position: absolute;
+        right: 10px;
+        bottom: -10px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .quote:nth-of-type(1) {
+        background-color: #ff6347; /* Tomato */
+      }
+      .quote:nth-of-type(2) {
+        background-color: #4682b4; /* SteelBlue */
+      }
+      .quote:nth-of-type(3) {
+        background-color: #32cd32; /* LimeGreen */
+      }
+      .quote:nth-of-type(4) {
+        background-color: #ff69b4; /* HotPink */
+      }
+      .quote:nth-of-type(5) {
+        background-color: #ffa07a; /* LightSalmon */
+      }
+      .quote:nth-of-type(6) {
+        background-color: #20b2aa; /* LightSeaGreen */
+      }
+    </style>
+  </head>
+  <body>
+<a href="resources.html" class="material-icons" >back</a>
+    <div class="container">
+      <h1>Motivational Quotes</h1>
+      <div class="quote">
+        "The future belongs to those who believe in the beauty of their dreams."
+        <br>- Eleanor Roosevelt
+      </div>
+      <div class="quote">
+        "You are never too old to set another goal or to dream a new dream."
+        <br>- C.S. Lewis
+      </div>
+      <div class="quote">
+        "It does not matter how slowly you go as long as you do not stop."
+        <br>- Confucius
+      </div>
+      <div class="quote">
+        "The only limit to our realization of tomorrow is our doubts of today."
+        <br>- Franklin D. Roosevelt
+      </div>
+      <div class="quote">
+        "Believe you can and you're halfway there."
+        <br>- Theodore Roosevelt
+      </div>
+      <div class="quote">
+        "Start where you are. Use what you have. Do what you can."
+        <br>- Arthur Ashe
+      </div>
+    </div>
+  </body>
+</html>
