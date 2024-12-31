@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn to write</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material-ui/core@latest/dist/material-ui.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            overflow-y: hidden;
+                background-color: #e9a5d8;
+        }
+        #canvas {
+            border: 12px solid #9b7700;
+            background-color: #969696; 
+            color: #f5f5f5;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 2px 3px 5px #969696;
+
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .button {
+            background-color: rgb(37, 179, 37);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #3700b3;
+        }
+        .clear-button {
+            background-color: #f44336;
+        }
+        .clear-button:hover {
+            background-color: #d32f2f;
+        }
+        .output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            display: inline;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+        }
+        .output span {
+            font-size: 24px;
+        }
+        .output .correct {
+            color: #4caf50;
+        }
+        .output .incorrect {
+            color: #f44336;
+        }
+          /* Responsive adjustments for mobile screens */
+  
+
+          img {
+    position: fixed; /* or absolute if within a specific container */
+    top: 30px; /* Adjust as needed for vertical positioning */
+    left: 50px; /* Adjust as needed for horizontal positioning */
+    z-index: 1000; /* Ensures the logo stays on top of other elements */
+}
+
+
+h1{
+    margin-bottom: 3px;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <img src="logo.png" width="100px" style="position: 0 0;" alt="ksl logo">
+  
+    <h1>Draw Here!!</h1>
+
+    <canvas  id="canvas" height="400px" width="800px"  ></canvas>
+    <div class="container">
+      
+        <div>
+            <button  class="clearbutton"><</button>
+         
+            <button id="clearButton" class="clear-button button">ERASE</button>
+            <button id="submitButton" class="button">ENTER</button>
+    
+         
+           <a href="#"> <button  class="clearbutton">></button> </a>
+           <span id="output" class="output">
+            <span id="feedbackIcon"></span>
+            <span id="feedbackText">Draw something above and click submit.</span>
+        </span>
+
+        </div>
+       
+    </div>
+    <script src="marking.js"></script>
+</body>
+</html>

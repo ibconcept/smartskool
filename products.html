@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SmartSkool" content="Innovative school products and solutions">
+    <meta name="keywords" content="school items, branding, design, printing, ibconcept-design-agency">
+    <meta property="og:title" content="SmartSkool leaners items">
+    <meta property="og:description" content="SmartSkool innovative school products and solutions">
+    <meta property="og:image" content="https://www.ibconcept.xyz">
+    <meta name="william-maina" content="ibconcept-design-agency">
+    <title>SmartSkool - Products</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .image-container {
+            width: 80vw;
+            /* Default to phone view */
+            max-width: 100%;
+            /* Ensure it doesn't exceed viewport */
+            margin: 0 auto;
+            display: block;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            /* Scale to fit container */
+        }
+.logo {
+      margin: initial;
+}
+        @media (min-width: 768px) {
+            .image-container {
+                width: 80vw;
+                /* PC view */
+            }
+        }
+
+        .card {
+            text-align: center;
+            margin: 1em auto;
+            padding: 1em;
+            display: flex;
+            border-radius: 8px;
+            /* Limit width */
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .pagination button {
+            margin: 0 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" class="logo" alt="SmartSkool Image">
+        </a>
+    </header>
+    <hr>
+    <a href="products.html" class="mdc-button mdc-button--raised">
+        <i class="material-icons mdc-button__icon">store</i>
+        <span class="mdc-button__label">Products</span>
+    </a>
+
+    <div id="product-container"></div>
+
+    <div class="pagination">
+        <button id="prev-button" onclick="changePage(-1)">Previous</button>
+        <button id="next-button" onclick="changePage(1)">Next</button>
+    </div>
+
+    <script>
+        const products = [
+            { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
+            // { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
+            // { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
+            // { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
+            // { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
+            // { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
+            // { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
+            // { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
+            // { name: "School Boards", image: "images/school-boards.jpg", description: "Durable and versatile school boards." },
+                        // { name: "1", image: "images/1.PNG", description: "Image 1." },
+            // { name: "1 Copy", image: "images/1 - Copy.jpg", description: "Image 1 Copy." },
+            // { name: "1 Copy (2)", image: "images/1 - Copy (2).jpg", description: "Image 1 Copy (2)." },
+            { name: "Awasi Boys School Logo", image: "images/awasi boys school logo.PNG", description: "Logo for Awasi Boys School." },
+            { name: "Clock Branding", image: "images/clock branding.PNG", description: "Branded school clocks." },
+            { name: "Kairi Secondary School Logo", image: "images/kairi secondary school logo.PNG", description: "Logo for Kairi Secondary School." },
+            { name: "Poiywek Secondary School Logo", image: "images/poiywek secondary school logo.PNG", description: "Logo for Poiywek Secondary School." },
+            { name: "Achengo Mixed Secondary School Logo", image: "images/achengo mixed secondary school logo.PNG", description: "Logo for Achengo Mixed Secondary School." },
+            { name: "School Logo", image: "images/school logo.PNG", description: "Generic school logo." },
+            { name: "Custom Badges", image: "images/custom badges key holders and door lables.PNG", description: "Custom badges and key holders." },
+            { name: "Medals and Trophies", image: "images/crystals medals and trophies.PNG", description: "Custom medals and trophies." },
+            { name: "Podiums", image: "images/podiums.PNG", description: "Podiums for school events." },
+            { name: "Labels and Signs", image: "images/lables and signs.PNG", description: "Various labels and signs for schools." },
+            { name: "Posters", image: "images/poster sample.jpg", description: "Sample school posters." },
+            { name: "Office Furniture Labeling", image: "images/office furniture lableling.PNG", description: "Labels for office furniture." },
+            { name: "Pupils PC", image: "images/pupils-with-pc.jpg", description: "Pupils computers." },
+            { name: "Practical Learning", image: "images/practical-learning-cbc.jpg", description: "Practical learning activities." },
+            { name: "Asian Student", image: "images/asian-student.jpg", description: "Image of an Asian student." },
+            { name: "African Boy", image: "images/african-boy-.JPG", description: "Image of an African boy." },
+            { name: "Stamp & Company Seal", image: "images/stamp & company seal.PNG", description: "Stamp and company seal." },
+            { name: "Plaques", image: "images/plaques.PNG", description: "Plaques for recognition." },
+
+
+            // Add more products as needed
+        ];
+
+        let currentPage = 1;
+        const productsPerPage = 4;
+
+        function renderProducts() {
+            const container = document.getElementById('product-container');
+            container.innerHTML = '';
+
+            const start = (currentPage - 1) * productsPerPage;
+            const end = start + productsPerPage;
+            const paginatedProducts = products.slice(start, end);
+
+            paginatedProducts.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'card';
+
+                productDiv.innerHTML = `
+                    <figure class="image-container">
+                        <img src="${product.image}" alt="${product.name}">
+                        <figcaption>${product.description}</figcaption>
+                    </figure>
+                    <h3>${product.name}</h3>
+                `;
+
+                container.appendChild(productDiv);
+            });
+
+            document.getElementById('prev-button').style.display = currentPage === 1 ? 'none' : 'inline';
+            document.getElementById('next-button').style.display = end >= products.length ? 'none' : 'inline';
+        }
+
+        function changePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage > 0 && newPage <= Math.ceil(products.length / productsPerPage)) {
+                currentPage = newPage;
+                renderProducts();
+            }
+        }
+
+        renderProducts();
+    </script>
+
+    <h3>Contact:</h3>
+
+<a href="tel:+254729301689">
+  <i class="fas fa-phone"></i> Call
+</a>
+
+
+    <p><strong>Location:</strong> Nairobi, Kenya</p>
+
+    <script src="script/material-io.js"></script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
