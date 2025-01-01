@@ -11,45 +11,50 @@
     <meta property="og:image" content="https://www.ibconcept.xyz">
     <meta name="william-maina" content="ibconcept-design-agency">
     <title>SmartSkool - Products</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            margin: initial;
+        }
+
         .image-container {
-            width: 80vw;
-            /* Default to phone view */
-            max-width: 100%;
-            /* Ensure it doesn't exceed viewport */
-            margin: 0 auto;
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            overflow: hidden;
+            gap: 1em;
+            margin: 0 auto;
             position: relative;
         }
 
-        .image-container img {
+        .card {
+            flex: 1 1 calc(33.33% - 1em);
+            max-width: calc(33.33% - 1em);
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .card img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             object-fit: cover;
-            /* Scale to fit container */
-        }
-.logo {
-      margin: initial;
-}
-        @media (min-width: 768px) {
-            .image-container {
-                width: 80vw;
-                /* PC view */
-            }
         }
 
-        .card {
-            text-align: center;
-            margin: 1em auto;
-            padding: 1em;
-            display: flex;
-            border-radius: 8px;
-            /* Limit width */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 80vw;
+                max-width: 80vw;
+            }
         }
 
         .pagination {
@@ -60,6 +65,15 @@
         .pagination button {
             margin: 0 0.5em;
         }
+
+        h3 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -69,33 +83,29 @@
             <img src="images/logo.png" class="logo" alt="SmartSkool Image">
         </a>
     </header>
-    <hr>
-    <a href="products.html" class="mdc-button mdc-button--raised">
-        <i class="material-icons mdc-button__icon">store</i>
-        <span class="mdc-button__label">Products</span>
-    </a>
 
-    <div id="product-container"></div>
+    <a href="products.html" class="mdc-button ">
+        <i class="material-icons mdc-button__icon">store</i>
+        <span class="mdc-button__label">Explore our array of Products from custom board designs to cbc stationeries</span>
+    </a>
+    <div id="product-container" class="image-container"></div>
 
     <div class="pagination">
         <button id="prev-button" onclick="changePage(-1)">Previous</button>
         <button id="next-button" onclick="changePage(1)">Next</button>
     </div>
 
+    <h3>Contact:</h3>
+
+    <a href="tel:+254729301689">
+        <i class="fas fa-phone"></i> Call
+    </a>
+
+    <p><strong>Location:</strong> Nairobi, Kenya</p>
+
     <script>
         const products = [
             { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
-            // { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
-            // { name: "Learning Tools", image: "images/1.jpg", description: "Enhance learning with our tools." },
-            // { name: "Motivation Signs", image: "images/asian-student.jpg", description: "Inspirational signs for students." },
-            // { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
-            // { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
-            // { name: "School Mottos", image: "images/school-mottos.jpg", description: "Custom school mottos for every institution." },
-            // { name: "Career Compass & Guidance", image: "images/career-compass.jpg", description: "Guidance tools for career planning." },
-            // { name: "School Boards", image: "images/school-boards.jpg", description: "Durable and versatile school boards." },
-                        // { name: "1", image: "images/1.PNG", description: "Image 1." },
-            // { name: "1 Copy", image: "images/1 - Copy.jpg", description: "Image 1 Copy." },
-            // { name: "1 Copy (2)", image: "images/1 - Copy (2).jpg", description: "Image 1 Copy (2)." },
             { name: "Awasi Boys School Logo", image: "images/awasi boys school logo.PNG", description: "Logo for Awasi Boys School." },
             { name: "Clock Branding", image: "images/clock branding.PNG", description: "Branded school clocks." },
             { name: "Kairi Secondary School Logo", image: "images/kairi secondary school logo.PNG", description: "Logo for Kairi Secondary School." },
@@ -114,13 +124,10 @@
             { name: "African Boy", image: "images/african-boy-.JPG", description: "Image of an African boy." },
             { name: "Stamp & Company Seal", image: "images/stamp & company seal.PNG", description: "Stamp and company seal." },
             { name: "Plaques", image: "images/plaques.PNG", description: "Plaques for recognition." },
-
-
-            // Add more products as needed
         ];
 
         let currentPage = 1;
-        const productsPerPage = 4;
+        const productsPerPage = 6;
 
         function renderProducts() {
             const container = document.getElementById('product-container');
@@ -135,7 +142,7 @@
                 productDiv.className = 'card';
 
                 productDiv.innerHTML = `
-                    <figure class="image-container">
+                    <figure>
                         <img src="${product.image}" alt="${product.name}">
                         <figcaption>${product.description}</figcaption>
                     </figure>
@@ -160,18 +167,7 @@
         renderProducts();
     </script>
 
-    <h3>Contact:</h3>
-
-<a href="tel:+254729301689">
-  <i class="fas fa-phone"></i> Call
-</a>
-
-
-    <p><strong>Location:</strong> Nairobi, Kenya</p>
-
     <script src="script/material-io.js"></script>
-
-    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>

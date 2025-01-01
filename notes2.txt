@@ -1,0 +1,22 @@
+React
+Syntax: JSX (JavaScript + HTML). It combines HTML-like syntax with JavaScript logic.
+HTML-Based: JSX is HTML within JavaScript, so it looks like HTML but is part of JavaScript logic.
+Svelte
+Syntax: Template-based. Svelte uses its own syntax, with HTML for markup, CSS for styling, and JavaScript for logic, but it compiles everything into optimized JavaScript at build time.
+HTML-Based: Markup is HTML but tightly integrated with its logic.
+Angular
+Syntax: Uses templates with Angular directives and binding. It combines HTML with Angular-specific syntax (like {{}}, *ngFor, etc.) for dynamic behavior.
+HTML-Based: Angular’s templates are HTML-based with additional Angular-specific syntax.
+Summary:
+
+React: HTML-like syntax with JavaScript (JSX)
+Svelte: HTML, CSS, and JS in a single file
+Angular: HTML with Angular's custom syntax and directives
+
+
+
+
+Svelte is the easiest for creating interactive curves, especially for beginners. Its syntax is simple and allows for easy integration with JavaScript libraries (like D3.js or Paper.js) to draw and manipulate curves.
+
+React and Angular are more complex, as React uses JSX and Angular requires more boilerplate for interactivity.
+For interactive geometry and curves, Svelte allows you to focus more on the logic and less on complex setup.S

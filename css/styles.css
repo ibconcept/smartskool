@@ -38,23 +38,24 @@ body {
 h1 {
   font-weight: 900;
   font-size: 2.5em; /* Adjusted for scalability */
-  margin: 1em;
+  margin: 0.2em;
   padding: 0.5em;
   color: var(--accent-color);
 }
 
 h2 {
   color: var(--secondary-color);
+  margin: 1em;
 }
 
 h3 {
-  margin: 0.5em;
+  margin: 0.2em;
   color: var(--accent-color);
   font-size: 1.2em;
 }
 
 .logo {
-  margin-top: 10vw;
+  margin-top: 2em;
   z-index: 1;
   border-radius: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -68,7 +69,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 1.5em;
-  margin-top: 2em;
+  margin-top: 1em;
   padding: 1em;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -120,7 +121,7 @@ p {
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 5%;
+  margin-top: 2em;
 }
 
 input[type="text"],
@@ -144,7 +145,7 @@ a {
 button {
   border: none;
   padding: 1em;
-  margin: 0.5em;
+  margin: 1em;
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
@@ -162,8 +163,7 @@ button:hover {
 /* For all divs across all classes */
 * div,
 a {
-  max-width: 100%;
-  margin: 3px;
+  max-width: 100%; 
 }
 
 /* Media Query for Responsiveness */
@@ -251,14 +251,14 @@ a {
 }
 
 .footer-section h3 {
-  margin-bottom: 15px;
+  margin-bottom: 1em;
   font-size: 16px;
   font-weight: bold;
 }
 
 .footer-section a {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   color: #333;
   text-decoration: none;
 }
@@ -268,7 +268,7 @@ a {
 }
 
 .footer-section .fa {
-  margin-right: 8px;
+  margin-right: 1em;
   font-size: 16px;
 }
 
