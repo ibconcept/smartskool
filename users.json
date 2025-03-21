@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": "user1",
+      "role": "parent",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "hashed_password_here",
+      "accessControl": {
+        "canViewAssignments": true,
+        "canCommentOnGrades": false,
+        "canUpdateProfile": true,
+        "canViewTimetable": true,
+        "canContactTeachers": true
+      },
+      "state": "active",
+      "level": "basic",
+      "documents": [
+        {
+          "type": "student_certificate",
+          "filename": "child_certificate.pdf",
+          "uploadDate": "2025-01-05"
+        },
+        {
+          "type": "identity_document",
+          "filename": "john_id.pdf",
+          "uploadDate": "2025-01-05"
+        }
+      ]
+    },
+    {
+      "id": "user2",
+      "role": "teacher",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "hashed_password_here",
+      "accessControl": {
+        "canViewAssignments": true,
+        "canCommentOnGrades": true,
+        "canUpdateProfile": true,
+        "canViewTimetable": true,
+        "canContactParents": true
+      },
+      "state": "active",
+      "level": "advanced",
+      "subjects": ["Math", "Physics"],
+      "documents": [
+        {
+          "type": "teacher_certificate",
+          "filename": "jane_teacher_cert.pdf",
+          "uploadDate": "2025-01-01"
+        }
+      ]
+    },
+    {
+      "id": "user3",
+      "role": "student",
+      "name": "Timmy Adams",
+      "email": "timmyadams@example.com",
+      "password": "hashed_password_here",
+      "accessControl": {
+        "canViewAssignments": true,
+        "canCommentOnGrades": true,
+        "canUpdateProfile": false,
+        "canViewTimetable": true,
+        "canContactTeachers": false
+      },
+      "state": "active",
+      "level": "intermediate",
+      "gradeLevel": "10",
+      "subjects": ["Math", "English", "History"],
+      "documents": [
+        {
+          "type": "school_id",
+          "filename": "timmy_school_id.pdf",
+          "uploadDate": "2025-01-05"
+        }
+      ]
+    },
+    {
+      "id": "user4",
+      "role": "admin",
+      "name": "School Admin",
+      "email": "admin@smartskool.com",
+      "password": "hashed_admin_password_here",
+      "accessControl": {
+        "canViewAssignments": true,
+        "canCommentOnGrades": true,
+        "canUpdateProfile": true,
+        "canViewTimetable": true,
+        "canContactTeachers": true,
+        "canManageUsers": true,
+        "canUpdateEnrollment": true,
+        "canManageTransfers": true,
+        "canViewAllDocuments": true
+      },
+      "state": "active",
+      "level": "admin",
+      "documents": [],
+      "schoolManagement": {
+        "enrollments": [
+          {
+            "studentId": "user3",
+            "enrollmentDate": "2025-01-01",
+            "status": "enrolled",
+            "gradeLevel": "10"
+          }
+        ],
+        "transferRequests": [
+          {
+            "studentId": "user3",
+            "fromGradeLevel": "9",
+            "toGradeLevel": "10",
+            "status": "approved",
+            "transferDate": "2025-01-01"
+          }
+        ]
+      }
+    }
+  ]
+}
