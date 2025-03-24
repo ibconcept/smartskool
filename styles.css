@@ -13,6 +13,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+iframe {
+  border-radius: 1em;
+  pointer-events: auto;
+  border: #ff4b9f solid 2px;
+
+}
 
 body {
   font-family: "Montserrat", "Open Sans", "Poppins", "Roboto", "Lato", "Source Sans Pro", sans-serif;
