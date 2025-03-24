@@ -1,0 +1,1 @@
+-- PostgreSQL schema (tables, relationships)
